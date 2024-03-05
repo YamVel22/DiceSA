@@ -4,17 +4,26 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Dice Game</title>
+    <!--CSS LINK-->
+    <link rel="stylesheet" href="style.css">
+    
   </head>
   <body>
     <header>DICE SA</header>
 
+    <!--Player container where they input their names and press enter to be 'locked in'.......wouldn't it be nice to pop up a set avatar for each play after pressing enter?-->
     <div class="container">
       <h2>Enter your name</h2>
       <div id="players">
         <input type="text" id=" player1" placeholder="Player 1" required />
+        <button onclick="submitPlayer(1)">Enter Player 1</button>
         <input type="text" id="player2" placeholder="Player 2" required />
+        <button onclick="submitPlayer(2)">Enter Player 2</button>
       </div>
     </div>
+    
+
+    <!--Rules container-->
     <div class="rules-container">
       <h2>How to play?</h2> <!--title for rule section is open to be changed-->
       <p>The objective of the game is to roll the highest number on the dice. <!--We can still edit the rules depending on how we plan our dice game-->
@@ -36,6 +45,14 @@
       </p>
     </div>
 
+
+
+<!--Begin game button which should take the players to main game page. Quit button which should clear/refresh the game?-->
+    <div class="button container">
+      <button id="begin">Begin Playing</button>
+      <button id="quit">Quit Gamw</button>
+    </div>
+
   <footer> 
     <p>
       DiceSA <br>
@@ -43,5 +60,7 @@
       </br>
     </p>
   </footer>
+
+  <script src="script.js"></script>
   </body>
 </html>
