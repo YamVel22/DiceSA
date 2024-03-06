@@ -6,18 +6,20 @@
     <title>Dice Game</title>
     <!--CSS LINK-->
     <link rel="stylesheet" href="style.css">
-
+<!--Google font link-->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anta&display=swap" rel="stylesheet">
   </head>
   <body>
-    <header>DICE SA</header>
+    <header id="title"> <h1>DICE SA</h1></header>
 
     <!--Player container where they input their names and press enter to be 'locked in'.......wouldn't it be nice to pop up a set avatar for each play after pressing enter?-->
     <div class="container">
-      <h2>Enter your name</h2>
       <div id="players">
-        <input type="text" id=" player1" placeholder="Player 1" required />
-        <button onclick="submitPlayer(1)">Enter Player 1</button>
-        <input type="text" id="player2" placeholder="Player 2" required />
+        <input type="text" id=" player1" placeholder="Player 1" required /><br>
+        <button onclick="submitPlayer(1)">Enter Player 1</button><br>
+        <input type="text" id="player2" placeholder="Player 2" required /><br>
         <button onclick="submitPlayer(2)">Enter Player 2</button>
       </div>
     </div>
@@ -49,14 +51,15 @@
 
 <!--Begin game button which should take the players to main game page. Quit button which should clear/refresh the game?-->
     <div class="button container">
-      <button id="begin">Begin Game</button>
+      <button id="begin">Begin Game
+       
+      </button>
       <button id="quit">Quit Game</button>
     </div>
 
   <footer> 
     <p>
-      DiceSA <br>
-        Copyright &copy Yamkelani & Yamukelwa 
+      DiceSA Copyright &copy Yamkelani & Yamukelwa 
       </br>
     </p>
   </footer>
@@ -66,4 +69,6 @@
 </html>
 
 
-<!--please help linking the html pages. cela undibonise how to do it-->
+<!--please help linking the html pages. where excatly do I add these?->
+<a href="load.html"> loading icon</a>
+<a href="index.html">Game page</a>
