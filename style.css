@@ -299,7 +299,7 @@ header {
     inset 0 0 0.5em 0.25em var(--glow-color);
 }
 
-#begin {
+#quit {
   --glow-color: rgb(228, 200, 204);
   --glow-spread-color: rgba(237, 136, 158, 0.781);
   --enhanced-glow-color: rgb(234, 169, 174);
@@ -320,7 +320,7 @@ header {
   transition: all 0.3s;
 }
 
-#begin::after {
+#quit::after {
   pointer-events: none;
   content: "";
   position: absolute;
@@ -334,7 +334,7 @@ header {
   transform: perspective(1.5em) rotateX(35deg) scale(1, 0.6);
 }
 
-#begin:hover {
+#quit:hover {
   color: var(--btn-color);
   background-color: var(--glow-color);
   box-shadow: 0 0 1em 0.25em var(--glow-color),
@@ -342,7 +342,7 @@ header {
     inset 0 0 0.75em 0.25em var(--glow-color);
 }
 
-#begin:active {
+#quit:active {
   box-shadow: 0 0 0.6em 0.25em var(--glow-color),
     0 0 2.5em 2em var(--glow-spread-color),
     inset 0 0 0.5em 0.25em var(--glow-color);
