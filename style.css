@@ -248,6 +248,7 @@ header {
 
 /*button container CSS*/
 .button-container {
+  text-align: center;
 }
 
 #begin {
@@ -349,7 +350,6 @@ header {
 }
 
 footer {
-  display: block;
-  width: 3500px;
+  text-align: center;
   margin: 0 auto;
 }
