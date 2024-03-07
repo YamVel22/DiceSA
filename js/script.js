@@ -1,5 +1,5 @@
 // Function to submit player names
-// we are using local storage as we are goung to be calling this names later in another file 
+// we are using local storage as we are goung to be calling this names later in another file
 function submitPlayer(playerNumber) {
   const playerName = document
     .getElementById(`player${playerNumber}`)
@@ -32,4 +32,9 @@ function continueGame() {
   } else {
     alert("Please enter both player names before continuing the game.");
   }
+}
+
+function quitGame() {
+  // Redirect to another HTML page when the quit button is clicked
+  window.location.href = "/html/quit.html";
 }
