@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dice SA Player</title>
+
+    <!-- CSS LINK -->
+    <!-- The link goes through the folder then file  -->
+    <!-- please call me if you have issues linking  -->
+    <link rel="stylesheet" href="/css/player.css" />
+    <link rel="stylesheet" href="/css/global.css" />
+
+    <!-- Google font link -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Anta&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header id="title">
+      <h1>DICE SA</h1>
+    </header>
+
+    <main>
+      <div class="container">
+        <div id="players">
+          <label for="player1">Player 1:</label>
+          <input
+            type="text"
+            id="player1"
+            placeholder="Enter Player 1"
+            required
+          /><br />
+          <button onclick="submitPlayer(1)">Enter Player 1</button><br />
+
+          <label for="player2">Player 2:</label>
+          <input
+            type="text"
+            id="player2"
+            placeholder="Enter Player 2"
+            required
+          /><br />
+          <button onclick="submitPlayer(2)">Enter Player 2</button>
+        </div>
+      </div>
+
+      <div class="button-container">
+        <button id="continue" onclick="continueGame()">Continue</button>
+        <button id="quit" onclick="quitGame()">Quit Game</button>
+      </div>
+    </main>
+
+    <footer>
+      <p>DiceSA &copy; Yamkelani &amp; Yamukelwa</p>
+    </footer>
+
+    <script src="/js/player.js"></script>
+  </body>
+</html>
