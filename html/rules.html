@@ -7,7 +7,9 @@
     <!-- CSS LINK -->
     <!-- The link goes through the folder then file  -->
     <!-- please call me if you have issues linking  -->
-    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/rules.css">
+    <link rel="stylesheet" href="/css/global.css" />
+
 
     <!-- Google font link -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -56,7 +58,7 @@
     <!-- Begin game button which should take the players to the main game page. Quit button which should clear/refresh the game? -->
     <div class="button-container">
       <button id="begin">Begin Game</button>
-      <button id="quit">Quit Game</button>
+      <button id="quit" onclick="quitPage()">Quit Game</button>
     </div>
 
     <footer>
@@ -64,6 +66,6 @@
       <p>DiceSA &copy; Yamkelani &amp; Yamukelwa</p>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="/js/quit.js"></script>
   </body>
 </html>

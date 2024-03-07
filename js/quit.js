@@ -1,4 +1,8 @@
 function goBack() {
-  // Replace 'your-page.html' with the actual path to the HTML page you want to navigate to
-  window.location.href = '/html/player.html';
+  window.location.href = "/html/player.html";
+}
+
+function quitPage() {
+  // window.location.href = "https://youtu.be/QtXby3twMmI?si=a7y9XcFHzHfwpcqA";
+  window.close();
 }
