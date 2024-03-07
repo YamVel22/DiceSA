@@ -33,7 +33,15 @@ h1 {
   text-align: center;
   margin: 0;
 }
-
+#countdownDisplay {
+  position: absolute;
+  top: 60%;
+  color: black;
+  font-size: 2rem;
+  font-weight: 900;
+  z-index: 1;
+  text-align: center;
+}
 .loader {
   /* Container for the dice*/
   position: relative; /* Ensure positioning context for absolute positioning */
