@@ -1,0 +1,11 @@
+/* this is css code that every file will use, put only code that every file uses!!! */
+
+body {
+  font-family: Anta, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: green;
+}
+header {
+  text-align: center;
+}
