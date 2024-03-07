@@ -5,7 +5,7 @@
   width: 20rem; /* Background circle around the dice */
   aspect-ratio: 1;
   border-radius: 50%;
-  perspective: 1000px;
+  perspective: 10000px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -16,6 +16,12 @@
   background-image: radial-gradient(#ffffff 1px, transparent 1px),
     radial-gradient(#ffffff 1px, var(--BG-COLOR) 1px);
   background-size: 24px 24px;
+
+  /* changes the positoin of the loader */
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 .loader {
   /* Container for the dice*/
@@ -24,13 +30,13 @@
   align-items: center;
   transform: rotateX(90deg);
   transform-style: preserve-3d;
-  animation: revolve 5s ease infinite;
+  animation: revolve 3s ease infinite;
 }
 .dot {
   width: 1rem;
-  aspect-ratio: 1;
+  aspect-ratio: 0.4;
   background-color: black;
-  border-radius: 50%;
+  border-radius: 110%;
 }
 .dotContainer {
   /* Flexbox to arrange dots horizontally */
@@ -52,10 +58,10 @@
 }
 .side {
   /* Actual sides of the dice */
-  background-color: rgba(255, 255, 255, 1);
+  background-color: rgba(255, 345, 255, 1);
   padding: 1rem;
   position: absolute;
-  width: 6em; /* Varying this will vary the Dice's size */
+  width: 9em; /* Varying this will vary the Dice's size */
   aspect-ratio: 1;
   display: flex;
   justify-content: center;
