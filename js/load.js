@@ -1,6 +1,6 @@
 // Use setTimeout to execute a function after a specified delay
 // this is a built in function in js
-let countdown = 300;
+let countdown = 30;
 
 // Display the initial countdown
 updateCountdown();
