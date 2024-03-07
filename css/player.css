@@ -1,5 +1,6 @@
 header {
   text-align: center;
+  color: #fff;
 }
 
 main {
@@ -7,7 +8,7 @@ main {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 90vh;
+  margin: 260px 0; /* Add margin to the top and bottom of the main container */
 }
 
 .container {
@@ -58,5 +59,10 @@ button:hover {
 
 #continue,
 #quit {
-  margin-right: 10px;
+  margin-right: 20px;
+}
+
+footer {
+  text-align: center;
+  color: #fff;
 }
