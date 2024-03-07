@@ -6,7 +6,7 @@ body {
 }
 
 .loaderViewPort {
-  --BG-COLOR: #00dfa2;
+  --BG-COLOR: #2f4858;
   width: 160rem; /* Adjust the width as needed */
   aspect-ratio: 1;
   border-radius: 50%;
@@ -144,27 +144,27 @@ h1 {
 @keyframes changeColor {
   /*we can change the colours of the loader or use a different one depending on our design*/
   0% {
-    background-color: #00dfa2;
+    background-color: #2f4858;
     background-position: 0px, 0px;
   }
   20% {
-    --BG-COLOR: #f72798;
+    --BG-COLOR: #3b3b06;
     background-position: 24px, 24px;
   }
   40% {
-    --BG-COLOR: #f57d1f;
+    --BG-COLOR: #27421b;
     background-position: 36px, 36px;
   }
   60% {
-    --BG-COLOR: #16ff00;
+    --BG-COLOR: #124632;
     background-position: 24px, 24px;
   }
   80% {
-    --BG-COLOR: #ff004d;
+    --BG-COLOR: #034846;
     background-position: 36px, 36px;
   }
   100% {
-    --BG-COLOR: #00dfa2;
+    --BG-COLOR: #164953;
     background-position: 24px, 24px;
   }
 }
