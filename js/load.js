@@ -18,5 +18,5 @@ const countdownInterval = setInterval(function () {
 function updateCountdown() {
   // Update the countdown display on the page
   const countdownDisplay = document.getElementById("countdownDisplay");
-  countdownDisplay.textContent = `Redirecting in ${countdown} seconds`;
+  countdownDisplay.textContent = `Booting up in ${countdown} seconds`;
 }

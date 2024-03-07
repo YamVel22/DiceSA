@@ -1,6 +1,10 @@
 /* great to separate the css for bug control */
 /* loading page css code only!!*/
 
+body {
+  font-family: Anta, sans-serif;
+}
+
 .loaderViewPort {
   --BG-COLOR: #00dfa2;
   width: 160rem; /* Adjust the width as needed */
