@@ -1,3 +1,7 @@
+body {
+  background: url(/images/green-billiard-fabric-texture-background_23-2148383560.jpg);
+}
+
 header {
   font-size: 36px;
   text-align: center;
@@ -10,6 +14,7 @@ h1 {
 .container {
   display: flex;
   justify-content: space-around;
+  align-items: flex-start;
 }
 
 /* Dice CSS*/
@@ -207,4 +212,12 @@ h1 {
 }
 
 /* player css*/
-
+h2 {
+  font-size: 30px;
+}
+.player {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
