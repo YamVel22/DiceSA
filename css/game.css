@@ -1,4 +1,3 @@
-
 header {
   font-size: 36px;
   text-align: center;
@@ -12,6 +11,8 @@ h1 {
   display: flex;
   justify-content: space-around;
 }
+
+/* Dice CSS*/
 
 #dice input {
   width: 100%;
@@ -204,3 +205,6 @@ h1 {
   top: 125px;
   left: 125px;
 }
+
+/* player css*/
+
