@@ -1,10 +1,10 @@
-//how do I call those local files//
+//how do I call those local files for the names?//
 
-var dice1, dice2, cube1, cube2;
-dice1 = document.getElementById("dice1");
-dice2 = document.getElementById("dice2");
-cube1 = document.getElementById("cube1");
-cube2 = document.getElementById("cube2");
+// Get elements
+let cube1 = document.getElementById("cube2");
+let dice1 = document.getElementById("dice1");
+let dice2 = document.getElementById("dice2");
+let results = document.getElementById("results");
 
 var min = 1;
-var max = 6;
+var max = 24;
