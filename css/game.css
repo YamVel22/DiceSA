@@ -8,6 +8,12 @@
   width: 45%;
 }
 
+#player1 #player2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 #dice input {
   width: 100%;
   padding: 20px 40px;
@@ -58,6 +64,10 @@
   border: 1px solid #fff;
   perspective: 1000px;
   perspective-origin: 50% 100%;
+  display: inline-block;
+}
+.container-cube2 {
+  margin-left: 300px;
 }
 
 #cube1,
