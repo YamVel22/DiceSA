@@ -1,53 +1,52 @@
-//get the players names from the player pages//
-
 // Get elements
 let cube = document.getElementById("cube1");
 let cube1 = document.getElementById("cube2");
 let dice1 = document.getElementById("dice1");
 let dice2 = document.getElementById("dice2");
-let player1Score = document.getElementById("player1Score");
-let player2Score = document.getElementById("player2Score");
-let results = document.getElementById("results");
+let player1Score = document.getElementById("player1Score"); // Make sure this element exists in your HTML
+let player2Score = document.getElementById("player2Score"); // Make sure this element exists in your HTML
 
 let min = 1;
-let max = 24;
+let max = 89;
 
-let player1TotalScore = 0;
-let player2TotalScore = 0;
+// Fetch player names from local storage
+const player1Name = localStorage.getItem("player1Name") || "Player 1";
+const player2Name = localStorage.getItem("player2Name") || "Player 2";
 
-//Player 1's dice roll
+// Display player names
+document.getElementById("player1").querySelector("h2").textContent =
+  player1Name;
+document.getElementById("player2").querySelector("h2").textContent =
+  player2Name;
+
+// Player 1's dice roll
 dice1.onclick = function () {
-  let xRand = getRandom(max, min);
-  let yRand = getRandom(max, min);
-
-  cube.style.webkitTranform =
-    "rotateX(" + xRand + "deg) rotateY(" + yRand + "deg)";
-  cube.style.transform = "rotateX(" + xRand + "deg) rotateY(" + yRand + "deg)";
-
-  xRand = getRandom(max, min);
-  yRand = getRandom(max, min);
-
-  cube2.style.webkitTransform =
-    "rotateX(" + xRand + "deg) rotateY(" + yRand + "deg)";
-  cube2.style.transform = "rotateX(" + xRand + "deg) rotateY(" + yRand + "deg)";
+  rollDice(cube);
 };
 
-//Player 2's dicce roll
+// Player 2's dice roll
 dice2.onclick = function () {
-  let xRand = getRandom(max, min);
+  rollDice(cube1);
+};
+
+function rollDice(cubeElement) {
+  let currentDice = getRandom(max, min);
+
+  // Adjust probability of both dice having the same number to %
+  const shouldHaveSameNumber = Math.random() <= 0.1;
+
+  while (shouldHaveSameNumber && currentDice === cubeElement.previousDice) {
+    currentDice = getRandom(max, min);
+  }
+
+  let xRand = currentDice;
   let yRand = getRandom(max, min);
 
-  cube.style.webkitTranform =
-    "rotateX(" + xRand + "deg) rotateY(" + yRand + "deg)";
-  cube.style.transform = "rotateX(" + xRand + "deg) rotateY(" + yRand + "deg)";
+  cubeElement.style.webkitTransform = `rotateX(${xRand}deg) rotateY(${yRand}deg)`;
+  cubeElement.style.transform = `rotateX(${xRand}deg) rotateY(${yRand}deg)`;
 
-  xRand = getRandom(max, min);
-  yRand = getRandom(max, min);
-
-  cube2.style.webkitTransform =
-    "rotateX(" + xRand + "deg) rotateY(" + yRand + "deg)";
-  cube2.style.transform = "rotateX(" + xRand + "deg) rotateY(" + yRand + "deg)";
-};
+  cubeElement.previousDice = currentDice;
+}
 
 function getRandom(max, min) {
   return (Math.floor(Math.random() * (max - min)) + min) * 90;
