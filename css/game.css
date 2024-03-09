@@ -1,20 +1,8 @@
 .container {
   display: flex;
-  justify-content: space-between;
-}
-.player-container {
-  text-align: center;
-  margin-top: 20px;
-  width: 45%;
+  justify-content: space-around;
 }
 
-#player1 #player2 {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-/*DICE CSS*/
 #dice input {
   width: 100%;
   padding: 20px 40px;
@@ -65,10 +53,6 @@
   border: 1px solid #fff;
   perspective: 1000px;
   perspective-origin: 50% 100%;
-  display: inline-block;
-}
-.container-cube2 {
-  margin-left: 275px;
 }
 
 #cube1,
@@ -209,33 +193,4 @@
 .bottom .dot6 {
   top: 125px;
   left: 125px;
-}
-
-button {
-  background-color: #4caf50;
-  color: #fff;
-  font: inherit;
-  border: 0;
-  color: #242424;
-  border-radius: 0.2em;
-  font-size: 2rem;
-  padding: 0.25em 0.75em;
-  font-weight: 600;
-  text-shadow: 0 0.0625em 0 #fff;
-  box-shadow: inset 0 0.0625em 0 0 #f4f4f4, 0 0.0625em 0 0 #efefef,
-    0 0.125em 0 0 #ececec, 0 0.25em 0 0 #e0e0e0, 0 0.3125em 0 0 #dedede,
-    0 0.375em 0 0 #dcdcdc, 0 0.425em 0 0 #cacaca, 0 0.425em 0.5em 0 #cecece;
-  transition: 0.15s ease;
-  &:active,
-  &:hover {
-    translate: 0 0.225em;
-    box-shadow: inset 0 0.03em 0 0 #f4f4f4, 0 0.03em 0 0 #efefef,
-      0 0.0625em 0 0 #ececec, 0 0.125em 0 0 #e0e0e0, 0 0.125em 0 0 #dedede,
-      0 0.2em 0 0 #dcdcdc, 0 0.225em 0 0 #cacaca, 0 0.225em 0.375em 0 #cecece;
-    cursor: pointer;
-    padding: 6px 11px;
-    border: none;
-    border-radius: 3px;
-    cursor: pointer;
-  }
 }
