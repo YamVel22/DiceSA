@@ -1,5 +1,5 @@
 function quitPage() {
-  window.location.href = "https://youtu.be/rNCc4T1rv0k?si=A18K6QdRLTUsxvFH";
+  window.location.href = "https://youtu.be/dXEVs32KHuo?si=7ygkSLpMHe3CbF3j";
   // window.close();
 }
 
