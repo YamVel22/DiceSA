@@ -1,6 +1,7 @@
 header {
   text-align: center;
   color: #fff;
+  font-size: larger;
 }
 
 main {
@@ -8,13 +9,12 @@ main {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 260px 0; /* Add margin to the top and bottom of the main container */
+  margin: 260px 0; 
 }
-
 .container {
   background-color: #fff;
-  padding: 40px;
-  border-radius: 9px;
+  padding: 50px;
+  border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   display: flex;
   flex-direction: column;
