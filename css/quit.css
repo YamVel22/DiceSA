@@ -2,6 +2,7 @@ header {
   text-align: center;
   margin-bottom: 20px;
   color: #fff;
+  font-size: larger;
 }
 
 main {
@@ -21,12 +22,25 @@ main {
 }
 
 button {
-  background-color: #4caf50;
-  color: #fff;
-  padding: 10px 15px;
-  border: none;
-  border-radius: 4px;
+  background: #fbca1f;
+  font-family: inherit;
+  padding: 0.3em 1em;
+  font-weight: 900;
+  border: 1px solid black;
+  border-radius: 0.4em;
+  box-shadow: 0.1em 0.1em;
   cursor: pointer;
+}
+
+
+button:hover {
+  transform: translate(-0.05em, -0.05em);
+  box-shadow: 0.15em 0.15em;
+}
+
+button:active {
+  transform: translate(0.05em, 0.05em);
+  box-shadow: 0.05em 0.05em;
 }
 
 .button-container {
