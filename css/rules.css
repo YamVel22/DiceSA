@@ -4,21 +4,31 @@ main {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 290px 0; /* Add margin to the top and bottom of the main container */
+  margin: 210px 0; /* Add margin to the top and bottom of the main container */
 }
 
 header {
   text-align: center;
   margin-bottom: 20px;
   color: #fff;
+  font-size: larger;
 }
 
 .rules-container {
-  background-color: #f9f9f9; /* Background color for the container */
-  border: 1px solid #ddd; /* Border color */
+  border: 5px solid burlywood; /* Border color */
   border-radius: 8px;
-  padding: 20px;
+  padding: 60px;
   margin-bottom: 20px;
+  background: #f1f1f1;
+  background-image: linear-gradient(
+      90deg,
+      transparent 50px,
+      #ffb4b8 50px,
+      #ffb4b8 52px,
+      transparent 52px
+    ),
+    linear-gradient(#e1e1e1 0.1em, transparent 0.1em);
+  background-size: 100% 30px;
 }
 
 .rules-container h2 {
@@ -38,16 +48,30 @@ header {
 }
 
 button {
-  background-color: #4caf50;
-  color: #fff;
-  font: inherit;
+  background: #fbca1f;
+  font-family: inherit;
+  padding: 0.3em 1em;
+  font-weight: 900;
+  border: 1px solid black;
+  border-radius: 0.4em;
+  box-shadow: 0.1em 0.1em;
+  cursor: pointer;
+}
+
+button:hover {
+  transform: translate(-0.05em, -0.05em);
+  box-shadow: 0.15em 0.15em;
+}
+
+button:active {
+  transform: translate(0.05em, 0.05em);
+  box-shadow: 0.05em 0.05em;
 }
 
 .button-container {
   text-align: center;
   margin-top: 20px; /* Add margin to the top of the button container */
 }
-
 #begin,
 #back,
 #quit {

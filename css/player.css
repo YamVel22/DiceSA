@@ -20,6 +20,16 @@ main {
   flex-direction: column;
   align-items: center;
   margin-top: 0px; /* Adjust this value to decrease or increase the distance from the top */
+  background: #f1f1f1;
+  background-image: linear-gradient(
+      90deg,
+      transparent 50px,
+      #ffb4b8 50px,
+      #ffb4b8 52px,
+      transparent 52px
+    ),
+    linear-gradient(#e1e1e1 0.1em, transparent 0.1em);
+  background-size: 100% 30px;
 }
 
 #players {
