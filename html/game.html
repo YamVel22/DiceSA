@@ -16,6 +16,18 @@
 
   <body>
     <div class="container">
+      <div class="players">
+        <div class="player" id="player1">
+          <p>Player 1 Score: <span id="score1">0</span></p>
+          <p>Name: <span id="name1"></span></p>
+        </div>
+        <div class="player" id="player2">
+          <p>Player 2 Score: <span id="score2">0</span></p>
+          <p>Name: <span id="name2"></span></p>
+        </div>
+      </div>
+    </div>
+    <div class="container">
       <div class="dice" id="dice1">
         <div class="dot one hidden"></div>
         <div class="two hidden">
@@ -82,8 +94,8 @@
           <div class="dot"></div>
         </div>
       </div>
-      <div class="background"></div>
     </div>
+    <button onclick="rollDice()">Roll Dice</button>
 
     <script src="/js/game.js"></script>
   </body>

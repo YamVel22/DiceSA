@@ -4,7 +4,7 @@ body {
   padding: 0;
   width: 100%;
   height: 100%;
-  --s: 84px;
+  /* --s: 84px;
   --c1: #79994f;
   --c2: #717246;
   --c3: #3b3b06;
@@ -41,7 +41,7 @@ body {
       var(--c2) 0 240deg,
       var(--c3) 0
     );
-  background-size: calc(var(--s) * 1.732) var(--s);
+  background-size: calc(var(--s) * 1.732) var(--s); */
 }
 
 .container {
