@@ -40,6 +40,7 @@ function hideFace(face) {
   face.classList.add("fadeOut");
   setTimeout(function () {
     face.classList.remove("fadeIn");
+    face.classList.remove("fadeOut"); // Add this line to remove "fadeOut" class
     face.classList.add("hidden");
   }, 900);
 }
@@ -63,7 +64,7 @@ function updateDice(diceElement, currentFace, player) {
   const num1 = generateNum();
 
   // Ensure a 10% probability of both dice being the same number
-  const num2 = Math.random() < 0.1 ? num1 : generateNum();
+  const num2 = Math.random() < 0.01 ? num1 : generateNum();
 
   switch (num1) {
     case 1:
