@@ -1,3 +1,7 @@
+//to be reviwed later in life
+//the problem is in line 102-134 
+// author Yamukelwa
+
 const dice1 = document.querySelector("#dice1");
 const dice2 = document.querySelector("#dice2");
 
