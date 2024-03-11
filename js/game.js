@@ -104,3 +104,13 @@ function updateScore(player, num) {
 // Initialize currentFace variables
 let currentFace1 = dice1.querySelector(".six");
 let currentFace2 = dice2.querySelector(".six");
+
+function quitPage() {
+  window.location.href = "https://youtu.be/dXEVs32KHuo?si=7ygkSLpMHe3CbF3j";
+  // window.close();
+}
+
+function goBack() {
+  // window.location.href = "https://youtu.be/QtXby3twMmI?si=a7y9XcFHzHfwpcqA";
+  window.location.href = "/html/rules.html";
+}

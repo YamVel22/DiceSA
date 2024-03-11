@@ -1,33 +1,63 @@
 header {
   text-align: center;
-  color: black;
-  font-size: large;
+  color: white;
+  font-size: xx-large;
+}
+
+body {
+  background: linear-gradient(
+    135deg,
+    #121212 25%,
+    #1a1a1a 25%,
+    #1a1a1a 50%,
+    #121212 50%,
+    #121212 75%,
+    #1a1a1a 75%,
+    #1a1a1a
+  );
+
+  /* Animation */
+  animation: move 4s linear infinite;
+}
+
+@keyframes move {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 40px 40px;
+  }
 }
 
 main {
-  flex: 1;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin: 140px 0;
 }
 
 .container {
-  width: 80%;
-  height: 90vh;
+  width: 70%;
+  height: 40vh;
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
-  /* background-color: red; */
+  /* margin-top: 0px; */
 }
 
 .players {
-  position: absolute;
-  top: 0;
-  left: 50px;
-  /* right: 0; */
-  z-index: 1;
+  display: flex;
+  /* align-items: center; */
+  justify-content: space-between; /* Adjust as needed */
+  width: 40%;
+  color: white;
+  font-size: 22px;
+}
+
+.player {
+  margin: 0 13px; /* Adjust the margin between players as needed */
 }
 
 .dice {
@@ -43,6 +73,32 @@ main {
 
 .dice:hover {
   cursor: pointer;
+}
+
+#roll,
+#back,
+#quit {
+  margin-right: 20px;
+}
+button {
+  background: #fbca1f;
+  font-family: inherit;
+  padding: 0.3em 1em;
+  font-weight: 900;
+  border: 1px solid black;
+  border-radius: 0.4em;
+  box-shadow: 0.1em 0.1em;
+  cursor: pointer;
+}
+
+button:hover {
+  transform: translate(-0.05em, -0.05em);
+  box-shadow: 0.15em 0.15em;
+}
+
+button:active {
+  transform: translate(0.05em, 0.05em);
+  box-shadow: 0.05em 0.05em;
 }
 
 .dot {
