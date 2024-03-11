@@ -18,5 +18,5 @@ const countdownInterval = setInterval(function () {
 function updateCountdown() {
   // Update the countdown display on the page
   const countdownDisplay = document.getElementById("countdownDisplay");
-  countdownDisplay.textContent = `Getting You Loaded ${countdown} seconds`;
+  countdownDisplay.textContent = `Ska wara Boss, in ${countdown} seconds uzoba right`;
 }
