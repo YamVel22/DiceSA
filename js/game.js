@@ -13,32 +13,28 @@ const player2 = {
   number: 2,
 };
 
-// Function to update the player names on the HTML page
 function updatePlayerNames() {
   document.getElementById("name1").innerText = player1.name;
   document.getElementById("name2").innerText = player2.name;
 }
 
-// Call the function to update player names initially
 updatePlayerNames();
 
-let turns = 0; // Add a variable to track the number of turns
-let isRolling = false; // Variable to track if the dice is currently rolling
+let turns = 0;
+let isRolling = false;
 
-// Add event listener to the button for rolling the dice
 document.querySelector("button").addEventListener("click", function () {
-  if (!isRolling && turns < 7) { // Check if the dice is not currently rolling and the number of turns is less than 5
-    isRolling = true; // Set rolling to true to prevent multiple clicks during the animation
+  if (!isRolling && turns < 6) {
+    isRolling = true;
     currentFace1 = updateDice(dice1, currentFace1, player1);
     currentFace2 = updateDice(dice2, currentFace2, player2);
-    turns++; // Increment the turns counter
+    turns++;
   } else if (!isRolling) {
-    endGame(); // Call the endGame function after the last turn
+    endGame();
   }
 });
 
 function endGame() {
-  // Check the highest score
   let winner;
   if (player1.score > player2.score) {
     winner = player1;
@@ -46,7 +42,6 @@ function endGame() {
     winner = player2;
   }
 
-  // Display the result
   const resultElement = document.getElementById("result");
   if (winner) {
     resultElement.innerText = `Congratulations, ${winner.name}! You have won!`;
@@ -54,7 +49,6 @@ function endGame() {
     resultElement.innerText = "What a tie!";
   }
 
-  // Display countdown timer
   let countdown = 10;
   const countdownElement = document.getElementById("countdown");
 
@@ -65,15 +59,14 @@ function endGame() {
     if (countdown < 0) {
       clearInterval(countdownInterval);
 
-      // Reset the game after the countdown
-      turns = 0; // Reset the turns counter
-      player1.score = 0; // Reset player 1 score
-      player2.score = 0; // Reset player 2 score
-      updateScore(player1, 0); // Update player 1 score on the UI
-      updateScore(player2, 0); // Update player 2 score on the UI
-      resultElement.innerText = ""; // Clear the result message
-      countdownElement.innerText = ""; // Clear the countdown message
-      isRolling = false; // Reset the rolling state
+      turns = 0;
+      player1.score = 0;
+      player2.score = 0;
+      updateScore(player1, 0);
+      updateScore(player2, 0);
+      resultElement.innerText = "";
+      countdownElement.innerText = "";
+      isRolling = false;
     }
   }, 1000);
 }
@@ -90,7 +83,7 @@ function hideFace(face) {
   face.classList.add("fadeOut");
   setTimeout(function () {
     face.classList.remove("fadeIn");
-    face.classList.remove("fadeOut"); // Add this line to remove "fadeOut" class
+    face.classList.remove("fadeOut");
     face.classList.add("hidden");
   }, 900);
 }
@@ -104,7 +97,9 @@ function stopRoll(diceElement) {
 }
 
 function generateNum() {
-  return Math.floor(Math.random() * 6) + 1;
+  const randomNumber = Math.floor(Math.random() * 6) + 1;
+  console.log("Generated number:", randomNumber);
+  return randomNumber;
 }
 
 function updateDice(diceElement, currentFace, player) {
@@ -112,9 +107,7 @@ function updateDice(diceElement, currentFace, player) {
   rollDice(diceElement);
 
   const num1 = generateNum();
-
-  // Ensure a 1% probability of both dice being the same number
-  const num2 = Math.random() < 0.01 ? num1 : generateNum();
+  const num2 = generateNum();
 
   switch (num1) {
     case 1:
@@ -141,7 +134,7 @@ function updateDice(diceElement, currentFace, player) {
   setTimeout(function () {
     stopRoll(diceElement);
     updateScore(player, num1 + num2);
-    isRolling = false; // Set rolling to false to allow the button click for the next turn
+    isRolling = false;
   }, 3000);
 
   return currentFace;
@@ -152,7 +145,6 @@ function updateScore(player, num) {
   document.getElementById(`score${player.number}`).innerText = player.score;
 }
 
-// Initialize currentFace variables
 let currentFace1 = dice1.querySelector(".six");
 let currentFace2 = dice2.querySelector(".six");
 
