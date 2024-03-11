@@ -1,3 +1,7 @@
+//author Yamkelani
+// patched logic
+//do not change name
+
 const dice1 = document.querySelector("#dice1");
 const dice2 = document.querySelector("#dice2");
 
@@ -96,44 +100,43 @@ function stopRoll(diceElement) {
   diceElement.classList.remove("roll");
 }
 
-function generateNum() {
-  const randomNumber = Math.floor(Math.random() * 6) + 1;
-  console.log("Generated number:", randomNumber);
-  return randomNumber;
-}
-
 function updateDice(diceElement, currentFace, player) {
   hideFace(currentFace);
-  rollDice(diceElement);
+  rollDice(diceElement); // Add rolling animation class here
 
-  const num1 = generateNum();
-  const num2 = generateNum();
+  const roll = Math.floor(Math.random() * 6) + 1; // Generate a random number between 1 and 6
 
-  switch (num1) {
+  switch (roll) {
     case 1:
       currentFace = diceElement.querySelector(".dot");
+      console.log("Dice landed on: 1");
       break;
     case 2:
       currentFace = diceElement.querySelector(".two");
+      console.log("Dice landed on: 2");
       break;
     case 3:
       currentFace = diceElement.querySelector(".three");
+      console.log("Dice landed on: 3");
       break;
     case 4:
       currentFace = diceElement.querySelector(".four");
+      console.log("Dice landed on: 4");
       break;
     case 5:
       currentFace = diceElement.querySelector(".five");
+      console.log("Dice landed on: 5");
       break;
     case 6:
       currentFace = diceElement.querySelector(".six");
+      console.log("Dice landed on: 6");
       break;
   }
 
   showFace(currentFace);
   setTimeout(function () {
-    stopRoll(diceElement);
-    updateScore(player, num1 + num2);
+    stopRoll(diceElement); // Remove rolling animation class after delay
+    updateScore(player, roll); // Update score with the random roll
     isRolling = false;
   }, 3000);
 
