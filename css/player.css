@@ -1,7 +1,7 @@
 header {
   text-align: center;
   color: #fff;
-  font-size: larger;
+  font-size: xx-large;
 }
 
 main {
@@ -88,4 +88,5 @@ button:active {
 footer {
   text-align: center;
   color: #fff;
+  font-size: larger;
 }

@@ -4,21 +4,21 @@ main {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 210px 0; /* Add margin to the top and bottom of the main container */
+  margin: 190px 0; /* Add margin to the top and bottom of the main container */
 }
 
 header {
   text-align: center;
   margin-bottom: 20px;
   color: #fff;
-  font-size: larger;
+  font-size: xx-large;
 }
 
 .rules-container {
   border: 5px solid burlywood; /* Border color */
   border-radius: 8px;
   padding: 60px;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   background: #f1f1f1;
   background-image: linear-gradient(
       90deg,
@@ -34,17 +34,19 @@ header {
 .rules-container h2 {
   color: #333;
   text-align: center;
-  margin-bottom: 50px;
+  margin-bottom: 40px;
   margin-top: 0;
+  font-size: xx-large;
 }
 
 #rules {
-  list-style-type: square; /* Use square bullets for the list */
-  padding-left: 20px; /* Add left padding to the list items for indentation */
+  list-style-type: square;
+  padding-left: 30px;
+  font-weight: 800;
 }
 
 #rules li {
-  margin-bottom: 10px; /* Add margin between list items */
+  margin-bottom: 25px;
 }
 
 button {
@@ -81,4 +83,5 @@ button:active {
 footer {
   text-align: center;
   color: #fff;
+  font-size: larger;
 }
