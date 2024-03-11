@@ -23,14 +23,16 @@ function updatePlayerNames() {
 updatePlayerNames();
 
 let turns = 0; // Add a variable to track the number of turns
+let isRolling = false; // Variable to track if the dice is currently rolling
 
 // Add event listener to the button for rolling the dice
 document.querySelector("button").addEventListener("click", function () {
-  if (turns < 5) { // Check if the number of turns is less than 5
+  if (!isRolling && turns < 7) { // Check if the dice is not currently rolling and the number of turns is less than 5
+    isRolling = true; // Set rolling to true to prevent multiple clicks during the animation
     currentFace1 = updateDice(dice1, currentFace1, player1);
     currentFace2 = updateDice(dice2, currentFace2, player2);
     turns++; // Increment the turns counter
-  } else {
+  } else if (!isRolling) {
     endGame(); // Call the endGame function after the last turn
   }
 });
@@ -71,6 +73,7 @@ function endGame() {
       updateScore(player2, 0); // Update player 2 score on the UI
       resultElement.innerText = ""; // Clear the result message
       countdownElement.innerText = ""; // Clear the countdown message
+      isRolling = false; // Reset the rolling state
     }
   }, 1000);
 }
@@ -110,7 +113,7 @@ function updateDice(diceElement, currentFace, player) {
 
   const num1 = generateNum();
 
-  // Ensure a 10% probability of both dice being the same number
+  // Ensure a 1% probability of both dice being the same number
   const num2 = Math.random() < 0.01 ? num1 : generateNum();
 
   switch (num1) {
@@ -138,6 +141,7 @@ function updateDice(diceElement, currentFace, player) {
   setTimeout(function () {
     stopRoll(diceElement);
     updateScore(player, num1 + num2);
+    isRolling = false; // Set rolling to false to allow the button click for the next turn
   }, 3000);
 
   return currentFace;
