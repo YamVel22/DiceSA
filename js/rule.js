@@ -5,9 +5,9 @@ function quitPage() {
 
 function goBack() {
   // window.location.href = "https://youtu.be/QtXby3twMmI?si=a7y9XcFHzHfwpcqA";
-  window.location.href = "/html/player.html";
+  window.location.href = "player.html";
 }
 
 function beginGame() {
-  window.location.href = "/html/game.html";
+  window.location.href = "game.html";
 }

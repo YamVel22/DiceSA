@@ -1,4 +1,4 @@
 function goBacktwo() {
   // window.location.href = "https://youtu.be/QtXby3twMmI?si=a7y9XcFHzHfwpcqA";
-  window.location.href = "/html/player.html";
+  window.location.href = "player.html";
 }

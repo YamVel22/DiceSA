@@ -153,5 +153,5 @@ function quitPage() {
 }
 
 function goBack() {
-  window.location.href = "/html/rules.html";
+  window.location.href = "rules.html";
 }

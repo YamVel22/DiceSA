@@ -11,7 +11,7 @@ const countdownInterval = setInterval(function () {
 
   if (countdown <= 0) {
     clearInterval(countdownInterval);
-    window.location.href = "/html/player.html";
+    window.location.href = "player.html";
   }
 }, 1000); // Update the countdown every 1000 milliseconds (1 second)
 
