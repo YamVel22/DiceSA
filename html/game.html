@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Dice Game</title>
     <link rel="stylesheet" href="/css/game.css" />
-    <!-- <link rel="stylesheet" href="/css/global.css" />-->
-    <!-- Google font link -->
+    <link rel="stylesheet" href="/css/global.css" />
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -14,97 +14,101 @@
       rel="stylesheet"
     />
   </head>
+
   <body>
-    <section class="container">
-      <section class="container-cube1">
-        <div id="cube1">
-          <div class="front">
-            <span class="dot dot1"></span>
+    <header id="title">
+      <h1>IT IS ABOUT TO GO DOWN</h1>
+    </header>
+    <div>
+      <p id="result"></p>
+    </div>
+    <div><p id="countdown"></p></div>
+    <main>
+      <div class="players">
+        <div class="player" id="player1">
+          <p>Player 1 Score: <span id="score1">0</span></p>
+          <p>Name: <span id="name1"></span></p>
+        </div>
+        <div class="player" id="player2">
+          <p>Player 2 Score: <span id="score2">0</span></p>
+          <p>Name: <span id="name2"></span></p>
+        </div>
+      </div>
+      <div class="container">
+        <div class="dice" id="dice1">
+          <div class="dot one hidden"></div>
+          <div class="two hidden">
+            <div class="dot"></div>
+            <div class="dot"></div>
           </div>
-          <div class="back">
-            <span class="dot dot1"></span>
-            <span class="dot dot2"></span>
+          <div class="three hidden">
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
           </div>
-          <div class="right">
-            <span class="dot dot1"></span>
-            <span class="dot dot2"></span>
-            <span class="dot dot3"></span>
+          <div class="four hidden">
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
           </div>
-          <div class="left">
-            <span class="dot dot1"></span>
-            <span class="dot dot2"></span>
-            <span class="dot dot3"></span>
-            <span class="dot dot4"></span>
+          <div class="five hidden">
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot center"></div>
           </div>
-          <div class="top">
-            <span class="dot dot1"></span>
-            <span class="dot dot2"></span>
-            <span class="dot dot3"></span>
-            <span class="dot dot4"></span>
-            <span class="dot dot5"></span>
-          </div>
-          <div class="bottom">
-            <span class="dot dot1"></span>
-            <span class="dot dot2"></span>
-            <span class="dot dot3"></span>
-            <span class="dot dot4"></span>
-            <span class="dot dot5"></span>
-            <span class="dot dot6"></span>
+          <div class="six">
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
           </div>
         </div>
-      </section>
-
-      <section class="container-cube2">
-        <div id="cube2">
-          <div class="front">
-            <span class="dot dot1"></span>
+        <div class="dice" id="dice2">
+          <div class="dot one hidden"></div>
+          <div class="two hidden">
+            <div class="dot"></div>
+            <div class="dot"></div>
           </div>
-          <div class="back">
-            <span class="dot dot1"></span>
-            <span class="dot dot2"></span>
+          <div class="three hidden">
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
           </div>
-          <div class="right">
-            <span class="dot dot1"></span>
-            <span class="dot dot2"></span>
-            <span class="dot dot3"></span>
+          <div class="four hidden">
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
           </div>
-          <div class="left">
-            <span class="dot dot1"></span>
-            <span class="dot dot2"></span>
-            <span class="dot dot3"></span>
-            <span class="dot dot4"></span>
+          <div class="five hidden">
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot center"></div>
           </div>
-          <div class="top">
-            <span class="dot dot1"></span>
-            <span class="dot dot2"></span>
-            <span class="dot dot3"></span>
-            <span class="dot dot4"></span>
-            <span class="dot dot5"></span>
-          </div>
-          <div class="bottom">
-            <span class="dot dot1"></span>
-            <span class="dot dot2"></span>
-            <span class="dot dot3"></span>
-            <span class="dot dot4"></span>
-            <span class="dot dot5"></span>
-            <span class="dot dot6"></span>
+          <div class="six">
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
           </div>
         </div>
-      </section>
-    </section>
-    <section class="players">
-      <div class="player-container" id="player1">
-        <h2>Player 1</h2>
-        <button id="dice1">Roll Dice</button>
       </div>
-      <div class="player-container" id="player2">
-        <h2>Player 2</h2>
-        <button id="dice2">Roll Dice</button>
+      <div class="button-container">
+        <button id="roll" onclick="rollDice()">Roll Dice</button>
+        <button id="back" onclick="goBack()">Back</button>
+        <button id="quit" onclick="quitPage()">Quit</button>
       </div>
-    </section>
 
-    <div id="results"></div>
-
-    <script src="/js/game.js"></script>
+      <script src="/js/game.js"></script>
+    </main>
   </body>
 </html>

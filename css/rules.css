@@ -4,74 +4,76 @@ main {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 290px 0; /* Add margin to the top and bottom of the main container */
+  margin: 190px 0; /* Add margin to the top and bottom of the main container */
 }
 
 header {
   text-align: center;
   margin-bottom: 20px;
   color: #fff;
+  font-size: xx-large;
 }
 
 .rules-container {
-  background-color: #f9f9f9; /* Background color for the container */
-  border: 1px solid #ddd; /* Border color */
+  border: 5px solid burlywood; /* Border color */
   border-radius: 8px;
-  padding: 20px;
-  margin-bottom: 20px;
+  padding: 60px;
+  margin-bottom: 10px;
+  background: #f1f1f1;
+  background-image: linear-gradient(
+      90deg,
+      transparent 50px,
+      #ffb4b8 50px,
+      #ffb4b8 52px,
+      transparent 52px
+    ),
+    linear-gradient(#e1e1e1 0.1em, transparent 0.1em);
+  background-size: 100% 30px;
 }
 
 .rules-container h2 {
   color: #333;
   text-align: center;
-  margin-bottom: 50px;
+  margin-bottom: 40px;
   margin-top: 0;
+  font-size: xx-large;
 }
 
 #rules {
-  list-style-type: square; /* Use square bullets for the list */
-  padding-left: 20px; /* Add left padding to the list items for indentation */
+  list-style-type: square;
+  padding-left: 30px;
+  font-weight: 800;
 }
 
 #rules li {
-  margin-bottom: 10px; /* Add margin between list items */
+  margin-bottom: 25px;
 }
 
 button {
-  background-color: #4caf50;
-  color: #fff;
-  font: inherit;
-  border: 0;
-  color: #242424;
-  border-radius: 0.5em;
-  font-size: 3rem;
-  padding: 0.375em 1em;
-  font-weight: 600;
-  text-shadow: 0 0.0625em 0 #fff;
-  box-shadow: inset 0 0.0625em 0 0 #f4f4f4, 0 0.0625em 0 0 #efefef,
-    0 0.125em 0 0 #ececec, 0 0.25em 0 0 #e0e0e0, 0 0.3125em 0 0 #dedede,
-    0 0.375em 0 0 #dcdcdc, 0 0.425em 0 0 #cacaca, 0 0.425em 0.5em 0 #cecece;
-  transition: 0.15s ease;
-  &:active,
-  &:hover {
-    translate: 0 0.225em;
-    box-shadow: inset 0 0.03em 0 0 #f4f4f4, 0 0.03em 0 0 #efefef,
-      0 0.0625em 0 0 #ececec, 0 0.125em 0 0 #e0e0e0, 0 0.125em 0 0 #dedede,
-      0 0.2em 0 0 #dcdcdc, 0 0.225em 0 0 #cacaca, 0 0.225em 0.375em 0 #cecece;
-    cursor: pointer;
-    padding: 10px 15px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-  }
+  background: #fbca1f;
+  font-family: inherit;
+  padding: 0.3em 1em;
+  font-weight: 900;
+  border: 1px solid black;
+  border-radius: 0.4em;
+  box-shadow: 0.1em 0.1em;
+  cursor: pointer;
+}
+
+button:hover {
+  transform: translate(-0.05em, -0.05em);
+  box-shadow: 0.15em 0.15em;
+}
+
+button:active {
+  transform: translate(0.05em, 0.05em);
+  box-shadow: 0.05em 0.05em;
 }
 
 .button-container {
   text-align: center;
   margin-top: 20px; /* Add margin to the top of the button container */
-  min-height: 100vh;
 }
-
 #begin,
 #back,
 #quit {
@@ -81,6 +83,5 @@ button {
 footer {
   text-align: center;
   color: #fff;
-  padding: 10px;
-  margin-top: 20px; /* Add margin to the top of the footer */
+  font-size: larger;
 }

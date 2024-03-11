@@ -6,7 +6,7 @@ body {
 }
 
 .loaderViewPort {
-  --BG-COLOR: #2f4858;
+  --BG-COLOR: #ff4700;
   width: 160rem; /* Adjust the width as needed */
   aspect-ratio: 1;
   border-radius: 50%;
@@ -14,8 +14,8 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 4px solid black;
-  animation: changeColor 5s ease infinite;
+  border: 10px solid black;
+  animation: changeColor 4s ease infinite;
   background-color: var(--BG-COLOR);
   opacity: 1;
   background-image: radial-gradient(black 1px, transparent 1px),
@@ -30,8 +30,8 @@ body {
 h1 {
   position: absolute;
   top: 40%; /* This controls the height of the h1 */
-  color: black;
-  font-size: 3rem;
+  color: white;
+  font-size: 5rem;
   font-weight: 900;
   z-index: 1;
   text-align: center;
@@ -40,7 +40,7 @@ h1 {
 #countdownDisplay {
   position: absolute;
   top: 60%;
-  color: black;
+  color: white;
   font-size: 2rem;
   font-weight: 900;
   z-index: 1;
@@ -60,7 +60,7 @@ h1 {
 
 .dot {
   width: 1rem;
-  aspect-ratio: 0.4;
+  aspect-ratio: 1;
   background-color: black;
   border-radius: 110%;
 }
@@ -87,7 +87,7 @@ h1 {
   background-color: rgba(255, 345, 255, 1);
   padding: 1rem;
   position: absolute;
-  width: 10em; /* Varying this will vary the Dice's size */
+  width: 7em; /* Varying this will vary the Dice's size */
   aspect-ratio: 1;
   display: flex;
   justify-content: center;
@@ -144,27 +144,27 @@ h1 {
 @keyframes changeColor {
   /*we can change the colours of the loader or use a different one depending on our design*/
   0% {
-    background-color: #2f4858;
+    background-color: #00ff47;
     background-position: 0px, 0px;
   }
   20% {
-    --BG-COLOR: #3b3b06;
+    --BG-COLOR: #ff00b8;
     background-position: 24px, 24px;
   }
   40% {
-    --BG-COLOR: #27421b;
+    --BG-COLOR: #00b8ff;
     background-position: 36px, 36px;
   }
   60% {
-    --BG-COLOR: #124632;
+    --BG-COLOR: #ff4700;
     background-position: 24px, 24px;
   }
   80% {
-    --BG-COLOR: #034846;
+    --BG-COLOR: #4700ff;
     background-position: 36px, 36px;
   }
   100% {
-    --BG-COLOR: #164953;
+    --BG-COLOR: #ff00b8;
     background-position: 24px, 24px;
   }
 }

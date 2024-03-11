@@ -1,6 +1,6 @@
 // Use setTimeout to execute a function after a specified delay
 // this is a built in function in js
-let countdown = 30;
+let countdown = 13;
 
 // Display the initial countdown
 updateCountdown();
@@ -18,5 +18,5 @@ const countdownInterval = setInterval(function () {
 function updateCountdown() {
   // Update the countdown display on the page
   const countdownDisplay = document.getElementById("countdownDisplay");
-  countdownDisplay.textContent = `Booting up in ${countdown} seconds`;
+  countdownDisplay.textContent = `Getting You Loaded ${countdown} seconds`;
 }
