@@ -1,6 +1,7 @@
 //author Yamkelani
 // patched logic
 //do not change name
+//this JS is linked to the game.html
 
 const dice1 = document.querySelector("#dice1");
 const dice2 = document.querySelector("#dice2");
@@ -48,16 +49,17 @@ function endGame() {
 
   const resultElement = document.getElementById("result");
   if (winner) {
-    resultElement.innerText = `Congratulations, ${winner.name}! You have won!`;
+    resultElement.innerText = `Awe🇿🇦, ${winner.name}! You are the top dawg!`;
   } else {
-    resultElement.innerText = "What a tie!";
+    resultElement.innerText =
+      "That's tough👀, both of you are standing on business!";
   }
 
-  let countdown = 10;
+  let countdown = 7;
   const countdownElement = document.getElementById("countdown");
 
   const countdownInterval = setInterval(() => {
-    countdownElement.innerText = `Restarting in ${countdown} seconds...`;
+    countdownElement.innerText = `Mandela effect in ${countdown} seconds...`;
     countdown--;
 
     if (countdown < 0) {
@@ -152,7 +154,7 @@ let currentFace1 = dice1.querySelector(".six");
 let currentFace2 = dice2.querySelector(".six");
 
 function quitPage() {
-  window.location.href = "https://youtu.be/dXEVs32KHuo?si=7ygkSLpMHe3CbF3j";
+  window.location.replace("https://youtu.be/dXEVs32KHuo?si=7ygkSLpMHe3CbF3j");
 }
 
 function goBack() {
