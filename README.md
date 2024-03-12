@@ -1,4 +1,4 @@
-# Cool Project Readme
+# Dice Game Alert
 
 Hey there! 👋 Welcome to our dicegame project created with HTML, CSS, and JavaScript. We've injected some serious coolness into this even addding some kasi flavour!, and we're stoked to have you check it out.
 
