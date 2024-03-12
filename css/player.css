@@ -12,6 +12,7 @@ main {
   margin: 230px 0;
 }
 .container {
+  border: 7px solid #fbca1f; /* Border color */
   background-color: #fff;
   padding: 50px;
   border-radius: 8px;
