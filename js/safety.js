@@ -6,6 +6,7 @@
 const dice1 = document.querySelector("#dice1");
 const dice2 = document.querySelector("#dice2");
 
+//create two players for the game and update their names from local storage
 const player1 = {
   name: localStorage.getItem("player1Name") || "Player One",
   score: 0,
@@ -28,17 +29,21 @@ updatePlayerNames();
 let turns = 0;
 let isRolling = false;
 
+//create button to begin game
+//set game conditions
 document.querySelector("button").addEventListener("click", function () {
   if (!isRolling && turns < 6) {
     isRolling = true;
     currentFace1 = updateDice(dice1, currentFace1, player1);
     currentFace2 = updateDice(dice2, currentFace2, player2);
     turns++;
+    //end of round
   } else if (!isRolling) {
     endGame();
   }
 });
 
+//determine who the winner is
 function endGame() {
   let winner;
   if (player1.score > player2.score) {
@@ -55,13 +60,15 @@ function endGame() {
       "That's tough👀, both of you are standing on business!";
   }
 
+  //countdown to reset the game after winner is determined
   let countdown = 7;
   const countdownElement = document.getElementById("countdown");
 
+  //display the count down
   const countdownInterval = setInterval(() => {
     countdownElement.innerText = `Mandela effect in ${countdown} seconds...`;
     countdown--;
-
+    //Game reset to defualt game seetings
     if (countdown < 0) {
       clearInterval(countdownInterval);
 
@@ -77,6 +84,7 @@ function endGame() {
   }, 1000);
 }
 
+//Show dice
 function showFace(face) {
   face.classList.add("fadeIn");
   setTimeout(function () {
@@ -85,6 +93,7 @@ function showFace(face) {
   }, 900);
 }
 
+//Hide dice during spin
 function hideFace(face) {
   face.classList.add("fadeOut");
   setTimeout(function () {
@@ -93,11 +102,11 @@ function hideFace(face) {
     face.classList.add("hidden");
   }, 900);
 }
-
+//display the dice rolling
 function rollDice(diceElement) {
   diceElement.classList.add("roll");
 }
-
+//stop the dice rolling by removing roll
 function stopRoll(diceElement) {
   diceElement.classList.remove("roll");
 }
@@ -108,6 +117,7 @@ function updateDice(diceElement, currentFace, player) {
 
   const roll = Math.floor(Math.random() * 6) + 1; // Generate a random number between 1 and 6
 
+  //displays the dice as it lands on each number between 1 and 6
   switch (roll) {
     case 1:
       currentFace = diceElement.querySelector(".dot");
@@ -134,7 +144,7 @@ function updateDice(diceElement, currentFace, player) {
       console.log("Dice landed on: 6");
       break;
   }
-
+  // stop the role and update the score
   showFace(currentFace);
   setTimeout(function () {
     stopRoll(diceElement); // Remove rolling animation class after delay
@@ -144,7 +154,7 @@ function updateDice(diceElement, currentFace, player) {
 
   return currentFace;
 }
-
+//update each players score per round after dice roll
 function updateScore(player, num) {
   player.score += num;
   document.getElementById(`score${player.number}`).innerText = player.score;
